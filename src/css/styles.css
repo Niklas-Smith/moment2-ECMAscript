@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*put padding and margin to 0  */
+body {
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 1.2em;
+line-height: 1.3em;
+max-width: 1200px;
+margin-left: auto;
+margin-right: auto;
+
+}
+/*put font-family to georgia and atleast serif, font-size 1.2em and line-height of 1.3em  */
+
+
+
+
+    h1{
+    text-align: center;
+     color: rgb(0, 54, 14);
+     font-size: 2em;
+     margin-top: 2em;
+    }
+
+
