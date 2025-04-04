@@ -25,3 +25,20 @@ window.onload = () => {
         
     }
 
+
+
+
+    function loadCourses(courses) {
+
+        const codeEl = document.querySelector("#course");
+    
+        codeEl .innerHTML="" 
+    
+        courses.forEach(course => {
+    
+            codeEl.innerHTML += `<tr> <td>${course.code}</td> <td>${course.coursename}</td> <td>${course.progression}</td> </tr>`;
+
+});
+
+    
+ }
