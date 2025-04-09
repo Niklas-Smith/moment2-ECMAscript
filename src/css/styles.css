@@ -12,20 +12,41 @@ margin-left: auto;
 margin-right: auto;
 
 }
-/*put font-family to georgia and atleast serif, font-size 1.2em and line-height of 1.3em  */
+/*put font-family to georgia and atleast serif, font-size 1.2em and line-height of 1.3em.
+also put content in center with max-width 1200px
+
+*/
 
 
 
 
     h1{
-    text-align: center;
      color: rgb(0, 54, 14);
      font-size: 2em;
      margin-top: 2em;
+     margin-bottom: 1em;
     }
-
-
+/*give h1 color, font-size and margins.  */
+    
 table {
 
-    max-width: 800px;
+    max-width: 63em;
+ 
 }
+
+/*make table max-width 63em */
+th {
+color: rgb(1, 150, 150);
+text-decoration-line: underline;
+cursor: pointer;
+padding-bottom: 0.5em;
+
+}
+/*Give th color, underline and have pointer curser */
+td {
+
+padding-left: 1em;
+padding-right: 1em;
+
+}
+/*Give td padding left and right */
