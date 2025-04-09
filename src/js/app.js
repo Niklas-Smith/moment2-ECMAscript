@@ -1,8 +1,13 @@
 
 let courses = [];
 
+document.querySelector("#courseCode").addEventListener("click", sortCourseCode);
+
 window.onload = () => {
     getCourses();
+
+
+    document.querySelector("#filter").addEventListener("input", filterInput);
 
     }
 
@@ -32,7 +37,7 @@ window.onload = () => {
 
         const codeEl = document.querySelector("#course");
     
-        codeEl .innerHTML="" 
+        codeEl.innerHTML=""
     
         courses.forEach(course => {
     
@@ -42,3 +47,17 @@ window.onload = () => {
 
     
  }
+
+ function filterInput() {
+    const filterValue = document.querySelector("#filter").value;
+
+    const filterData = courses.filter(course => 
+course.code.toLowerCase().includes(filterValue.toLowerCase()) ||
+course.coursename.toLowerCase().includes(filterValue.toLowerCase()) ||
+course.progression.toLowerCase().includes(filterValue.toLowerCase())
+
+    );
+
+loadCourses(filterData)
+ }
+
