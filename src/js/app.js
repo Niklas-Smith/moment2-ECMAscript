@@ -1,7 +1,6 @@
 
 let courses = [];
 
-document.querySelector("#courseCode").addEventListener("click", sortCourseCode);
 
 window.onload = () => {
     getCourses();
@@ -45,7 +44,15 @@ window.onload = () => {
 
 });
 
-    
+let courseCodeEl = document.getElementById("courseCode")  
+courseCodeEl.addEventListener("click", sortCourseCode )
+
+let courseNameEl = document.getElementById("courseName")  
+courseNameEl.addEventListener("click", sortCourseName )
+
+let courseProgEl = document.getElementById("courseProg")  
+courseProgEl.addEventListener("click", sortcourseProg )
+
  }
 
  function filterInput() {
@@ -61,3 +68,35 @@ course.progression.toLowerCase().includes(filterValue.toLowerCase())
 loadCourses(filterData)
  }
 
+function sortCourseCode() {
+
+    
+    const sortCode = courses
+    
+    sortCode.sort((a,b) => a.code > b.code ? 1 : -1)
+    loadCourses(courses)
+
+}
+
+
+function sortCourseName() {
+
+    
+    const sortName = courses
+    
+    sortName.sort((a,b) => a.coursename > b.coursename ? 1 : -1)
+    loadCourses(courses)
+
+}
+
+
+
+function sortcourseProg() {
+
+    
+    const sortProg = courses
+    
+    sortProg.sort((a,b) => a.progression > b.progression ? 1 : -1)
+    loadCourses(courses)
+
+}
